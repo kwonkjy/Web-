@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+
+  <style>
+	#aa {				   /* Inline은 width, height 적용안됨 */
+		width:300px;
+		height:100px;
+		border-color:red;  /* 색상 줄 때 필히 가로세로 및 스타일 줄것 */
+		border-style:solid;
+		border-width:1px;
+		border-radius:30px;
+	}
+
+	#bb{
+		border-color:blue;  /* 색상 줄 때 필히 가로세로 및 스타일 줄것 */
+		border-style:dashed;  /*border style은 dotted, dashed, double */
+		border-width:1px;
+	}
+
+	#cc{
+		width:200px;
+		height:30px;
+		border:5px solid green;
+		border-style:dotted dashed solid double;;
+		border-radius:1px;
+	}
+
+	#dd{
+		width:100px;
+		height:50px;
+		border-top-color:red;
+		border-top-style:dotted;
+		border-top-width:2px;
+		border-bottom:2px dotted blue;
+	}
+
+	input{
+		width:200px;
+		height:100px;
+	    background:darkblue;
+		color:white;
+		border:none;  /*버튼사용시 border none을 많이 씀*/
+	}
+
+
+	#ss{
+		width:10px;
+		height:10px;
+		border-left:2px solid green;
+		display:inline-block; 
+	}
+  </style>
+ </head>
+
+ <body>
+	<input type=button value=click>
+	<div id=aa> </div> <p>
+	<div id=cc> dotted dashed solid double</div> <p>
+	<div id=dd> 특정부분만</div> <p>
+	<div id=ee> </div> <p>
+
+	<div id=bb> 안녕 </div> <p>
+	<span id=bb> 안녕 </span> <p>
+	
+	<span style="float:left"> 미국음식 </span><div id=ss></div> 한국음식 <div id=ss></div> 독일음식
+
+ </body>
+</html>
