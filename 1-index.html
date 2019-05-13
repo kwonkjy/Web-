@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+  <style>
+	body{
+	 margin:0;  /* 바깥여백 0, auto 가능 */
+	}
+	a{
+	 color:black;
+	 text-decoration:none;
+	}
+	h1{
+	 font-size:45px;
+	 text-align:center;
+	 border-bottom:1px solid gray;
+	 margin:0;
+	 padding:20px;
+	}
+	ol{
+	  border-right:1px solid gray;
+	  width:100px;
+	  margin:0px;
+	  padding:20px;
+	}
+	ul{
+	  border-right:1px solid lightgray;
+	}
+	#grid{  
+	  display:grid;
+	  grid-template-columns: 150px 1fr;
+	}
+	#grid ol{
+	  padding-left:33px;
+	}
+	#grid #article {
+	  padding-left:25px;
+	}
+	@media(max-width:800px){  
+	 #grid{
+	   display:block;
+	 }
+	 ol{
+	   border-right:none;
+	 }
+	 h1{
+	   border-bottom:none;
+	 }
+	}
+  </style>
+ <body>
+ 	<h1><a href="index.html">WEB</a></h1>
+	<div id="grid">
+	 <ol>
+	  <li><a href="1-index.html">HTML</a></li>
+	  <li><a href="2-index.html">CSS</a></li>
+	  <li><a href="3-index.html">JavaScript</a></li>
+	  <li><a href="4-index.html">JQuery</a></li>
+	 </ol>
+	<div id="article">
+	 <h2><a href="1-index.html">HTML</a></h2>
+	 <p>
+	  Hypertext Markup Language
+	 </p><hr>
+	 
+ <!--하나더 붙인 구간-->
+	<div id="grid">
+	 <ul>
+	  <li><a href="1-1_basic.html"> Basic </a></li>
+	  <li><a href="1-2_table.html"> Table </a></li>
+	  <li><a href="1-3_form.html"> Form </a></li>
+	 </ul>
+	<div id="article">
+	 <h4>20190427 1st</h4>
+	 <p><pre>
+*웹동작서비스(사용자-요청/응답-request-사이트)
+*서버마다 설정파일 (파일이름 모르더라도 보여주는 페이지. 
+ex- index.html 등 / windows는 defualt가 기본. 마우스클릭=액션. hyper text)
+
+<b>1.</b> APMSETUP 설치 => htdocs에 꼭 파일넣기!
+-교육용 프로그램
+-탐색기실행 vs 웹서버실행은 다르다.
+*설치 후 http://localhost 브라우저=>정상설치확인(안내문서뜸)
+*탐색기-C-Apmsetup-htdocs-index.php (파일내용 고치고 실행해봄)
+*http://192.168.200.165 치면 웹서버인 컴퓨터 내 파일내용 뜸.
+ (단, 파일이름을 알아야함. index 외일 경우. 파일이름까지 적을 것)
+
+2. 편집도구 : Editplus 설치
+
+3. 작업디렉토리 : c\apm_setup\htdocs
+해당폴더경로- 새파일-html페이지만들기 http://localhost/first.html (로컬호스트/ID둘다가능) 
+/파일이름 로컬호스트뒤.
+*기본구조
+〈html〉
+ 〈head〉
+   설정, 정보, css, javascript
+ 〈/head
+ 〈body>
+   브라우저에서 보이는 영역
+ 〈/body>
+〈/html>
+*개발언어는 오류시 실행불가. html은 오류까지 출력.
+
+4. HTML Tag 
+주석 〈!--   -->
+〈a href=" ">  (a=이름 / href 속성) 태그는 태그이름과 속성으로 구성된다.
+*종료태그가 존재하거나, 하지 않음 〈br은 없는 태그>
+〈iframe>〈object>〈embed>〈form>〈input>
+*Ctrl+Shift+E 에디트플러스에서 브라우저 실행
+*iDOCTYPE html 태그 (Java script 사용시 필)
+* 글자관련태그 (웹표준에서는 CSS로)
+〈h1>~〈h6> 타이틀용/볼드체
+〈p> 줄바꿈. 문단별 구분용도 〈br>엔터
+〈hr> 수평선
+〈font> 
+〈i> 이탤릭체기능만
+〈u> 밑줄
+〈del> 중간줄
+* STYLE태그 : i{ 태그지정스타일가능.또는구간지정
+*외부시트CSS - Style sheet
+★ 〈a> 하이퍼링크태그!!!
+★★ 목록태그 (type 설정가능)
+〈ul> 순서없는목록/ 써클.스퀘어.디스크
+  〈li>〈/li>
+  〈li>〈/li>
+〈/ul>
+〈ol> 순서있는 /숫자(기본).알파벳 등
+  〈li>〈/li>
+  〈li>〈/li>
+〈/ol>
+
+5. Table Tag
+-tr (행) / td (일반요소) / tn (제목요소)
+-border 외곽라인. cellspacing 내각라인.
+-cellpadding 글자와 셀간 간격
+-colspan(횡) rowspan(종) 셀 합치기
+
+6. Img Tag
+-src 이미지경로 / alt 이미지없을시
+
+7. Html태그는 inline, block 형식 태그로 나뉜다.
+-block형 태그 => 한 라인을 다 차지**
+ (H1은 블록형. 자동으로 p,br없이 줄바꿈됨)
+-inline형 태그 => 필요한 공간만 차지(데이터만큼만)(b나 i는 인라인형 태그)
+*html 태그 => 자기자신의 특징
+*기능 없는 태그 〈div> 〈span> => CSS를 위한 태그
+ (백지상태필요성 => CSS지정위함)
+
+*form 태그 (사용자와 대화 위한 태그)
+ -input type button은 주로 JS 함수 호출용으로 씀.
+ -type submit은 처음으로 전송하는 버튼.
+ -type img는 submit 버튼을 그림으로 대체(요즘은 css로 대체)
+=> 교재 chapter2 참조.
+
+8. form method & action
+- method는 post / get 방식
+-브라우저 ------- 서버(DB)
+ post: 주소가림 (로그인등은 post必) get:주소노출
+*http://localhost.aa.php 액션이 정의된 페이지로 날아감.
+-> 해당 페이지를 생성해야함. 값을 보낼 곳.
+
+9. 시맨틱 태그 
+*시맨틱 웹 : 특정 태그에 의미를 부여한 웹 / 지능형 웹
+
+https://gsnedders.html5.org/outliner/ 시맨틱웹레이아웃
+http://koxo.com/lang/js/method/createElement.html
+http://www.tjedu.co.kr/front/course/lecture.asp?idx=20160036
+http://webberstudy.com/html-css/html-1/anchor-element-id-attribute/
+https://blog.naver.com/rjm2004/10022065117 웹표준
+http://ko.learnlayout.com/ CSS 관련 학습
+
+선택자{스타일속성1: 값; 속성2: 값;}
+  </pre>
+    </div>
+ </body>
+</html>

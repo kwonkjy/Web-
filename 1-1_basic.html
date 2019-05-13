@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+  <style>
+	body{
+	 margin:0;  /* 바깥여백 0, auto 가능 */
+	}
+	a{
+	 color:black;
+	 text-decoration:none;
+	}
+	h1{
+	 font-size:45px;
+	 text-align:center;
+	 border-bottom:1px solid gray;
+	 margin:0;
+	 padding:20px;
+	}
+	ol{
+	  border-right:1px solid gray;
+	  width:100px;
+	  margin:0px;
+	  padding:20px;
+	}
+	#grid{   /*그리드로 반응형 웹 만들기*/
+	  display:grid;
+	  grid-template-columns: 150px 1fr;
+	}
+	#grid ol{
+	  padding-left:33px;
+	}
+	#grid #article {
+	  padding-left:25px;
+	}
+	@media(max-width:800px){  /*해당 선언의 역할 무엇인가?*/
+	 #grid{
+	   display:block;
+	 }
+	 ol{
+	   border-right:none;
+	 }
+	 h1{
+	   border-bottom:none;
+	 }
+	}
+  </style>
+ <body>
+ 	<h1><a href="index.html">WEB</a></h1>
+	<div id="grid">
+	 <ol>
+	  <li><a href="1-index.html">HTML</a></li>
+	  <li><a href="2-index.html">CSS</a></li>
+	  <li><a href="3-index.html">JavaScript</a></li>
+	  <li><a href="4-index.html">JQuery</a></li>
+	 </ol>
+	<div id="article">
+	 <h2><a href="1-index.html">HTML</a></h2>
+	 <p>
+	  Hypertext Markup Language
+	 </p><hr>
+	 
+ <!--하나더 붙인 구간-->
+	<div id="grid">
+	 <ul>
+	  <li><a href="1-1_basic.html"> Basic </a></li>
+	  <li><a href="1-2_table.html"> Table </a></li>
+	  <li><a href="1-3_form.html"> Form </a></li>
+	 </ul>
+	<div id="article">
+	 <p><pre>
+ <body>
+     <!-- 브라우저에 나타날 내용을 적는다 -->
+    <h5>안녕하세요.</h5>
+	<strong>HTML 첫 페이지</strong>&nbsp;입니다.
+	<hr>
+	<pre>  <!--메모장 그대로 엔터/스페이스적용-->
+	<font color=red>동해물과</font>
+	백두산이 마르고 닳도록
+	</pre>
+	하느님이 보우하사 우리나라 만세~
+    <hr>
+
+<h4>H4<h5>H5<h6>H6</h6></h5></h4>
+<i>i=이탤릭체.다른기능은없음.<br><br/>스타일 i{에서 일괄적용</i><br><br/>
+<u>이거는u</u>&nbsp;&nbsp;<del>이건del</del><br><br/>
+
+ <!-- <a> 태그, 하이퍼링크태그 : 주소or문서로 이동-->
+ <a href="http://www.naver.com"> 클릭시 네이버로 이동 </a>&nbsp;
+ <a href="first.html"> 두번째파일로 </a><p>  <!--동일컴퓨터라면 경로지정 파일가능-->
+ <a href="http://www.naver.com"><img src="https://postfiles.pstatic.net/MjAxOTAzMjBfODUg/MDAxNTUzMDU4MDQ1NTE0.jvgeq0ohA_EJIv5-3LxLp1b8aKVQAA6wWvnAquqDWigg.VY_3C2ai4mfAQam0LC2A4EI3D1NIcanpd8k4ZeAAPXYg.PNG.alyssa111/SE-860775db-6d2b-483c-8815-9eff05b7b682.png?type=w966"></a>
+
+ <h1>h1</h1><h1><b>h1</b></h1>
+ <sub>sub는아래첨자</sub>&nbsp;<sup>sup는위첨자</sup><p>
+
+ <!-- 목록태그-->
+	**목록태그는 리스트형식으로 나옴. <p>
+	ul은 순서X(circle, square, disc) ol은 순서O(A, a, I, i, 1) 타입설정<p>
+	1. 물 넣음 <br>
+	2. 끓으면 라면 투하 <br>
+	3. 4분 뒤 취식 
+
+	<ul type=circle> <!--순서가 없는 목록 / type => circle, square, disc(기본)  --> 
+	 <li>짜장면</li>
+	 <li>우동</li>
+	</ul>
+	<ol>             <!--순서가 있는 목록 / type => A, a, I, i, 1(기본) -->
+	 <li>라면</li>
+	 <li>칼국수</li>
+   </ol>
+	
+ </body>
+  </pre>
+    </div>
+ </body>
+</html>

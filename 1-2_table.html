@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+  <style>
+	body{
+	 margin:0;  /* 바깥여백 0, auto 가능 */
+	}
+	a{
+	 color:black;
+	 text-decoration:none;
+	}
+	h1{
+	 font-size:45px;
+	 text-align:center;
+	 border-bottom:1px solid gray;
+	 margin:0;
+	 padding:20px;
+	}
+	ol{
+	  border-right:1px solid gray;
+	  width:100px;
+	  margin:0px;
+	  padding:20px;
+	}
+	#grid{   /*그리드로 반응형 웹 만들기*/
+	  display:grid;
+	  grid-template-columns: 150px 1fr;
+	}
+	#grid ol{
+	  padding-left:33px;
+	}
+	#grid #article {
+	  padding-left:25px;
+	}
+	@media(max-width:800px){  /*해당 선언의 역할 무엇인가?*/
+	 #grid{
+	   display:block;
+	 }
+	 ol{
+	   border-right:none;
+	 }
+	 h1{
+	   border-bottom:none;
+	 }
+	}
+  </style>
+ <body>
+ 	<h1><a href="index.html">WEB</a></h1>
+	<div id="grid">
+	 <ol>
+	  <li><a href="1-index.html">HTML</a></li>
+	  <li><a href="2-index.html">CSS</a></li>
+	  <li><a href="3-index.html">JavaScript</a></li>
+	  <li><a href="4-index.html">JQuery</a></li>
+	 </ol>
+	<div id="article">
+	 <h2><a href="1-index.html">HTML</a></h2>
+	 <p>
+	  Hypertext Markup Language
+	 </p><hr>
+	 
+ <!--하나더 붙인 구간-->
+	<div id="grid">
+	 <ul>
+	  <li><a href="1-1_basic.html"> Basic </a></li>
+	  <li><a href="1-2_table.html"> Table </a></li>
+	  <li><a href="1-3_form.html"> Form </a></li>
+	 </ul>
+	<div id="article"> <p>
+ <body>
+<!--표만들기 table. tr, td만 사용-->
+<!--테이블은 행과 열을 가진다-->
+<!--테이블속성주기. 속성은 태그 뒤에 준다-->
+
+<table width="300" height="300" border="2" cellspacing="0" cellpadding="0" align="center"> <!--3행 3열-->
+	<!--테이블에서의 align은 웹브라우저와 테이블간의 중앙정렬임(텍스트가 아님)-->
+	<caption> 캡션은 테이블제목 </caption>
+	<tr align="center"> <!--1행--> <!--td 3열--> <!--tr에 센터시 내용중앙. td는 해당칸만-->
+		<td width="100"> 1 </td>
+		<td width="100"> 2 </td>
+		<td width="100"> 3 </td>
+	</tr>
+
+	<!--셀과 셀 합치기-->
+	<tr align="center"> <!--2행-->
+		<td> 4 </td>
+		<td> 5 </td>
+		<td> 6 </td>
+	</tr>
+	<tr align="center"> <!--3행-->
+		<td> 7 </td>
+		<td> 8 </td>
+		<td> 9 </td>
+	</tr>
+</table>
+<p>
+
+<table width="300" height="300" border="1" cellspacing="1" cellpadding="1" align="center">
+	<caption> 테이블 합치기 </caption>
+	<tr align="center"> 
+		<td colspan="2"> colspan </td>
+		<td>  </td>
+	</tr>
+
+	<tr align="center"> 
+		<td> &nbsp; </td>
+		<td> &nbsp; </td>
+		<td rowspan="2"> rowspan </td>
+	</tr>
+
+		<tr align="center"> 
+		<td> &nbsp; </td>
+		<td> &nbsp; </td>
+	</tr>
+</table>
+<p>
+
+<table width="300" height="300" border="1" align="center">
+	<caption> 5행 5열 </caption>
+	<tr> 
+		<td rowspan="3"> 1-1 </td>
+		<td> 1-2 </td>
+		<td> 1-3 </td>
+		<td> 1-4 </td>
+		<td> 1-5 </td>
+	</tr> <!--1행 3개-->
+
+	<tr> 
+		<td> 2-1 </td>
+		<td colspan="2" rowspan="2"> 2-2 </td>
+		<td> 2-3 </td>
+	</tr> <!--2행 3개-->
+
+	<tr>
+		<td> 3-1 </td>
+		<td> 3-2 </td>
+	</tr> <!--3행 2개-->
+
+	<tr>
+		<td colspan="3"> 4-1 </td>
+		<td colspan="2" rowspan="2"> 4-2 </td>
+	</tr> <!--4행 2개-->
+
+	<tr>
+		<td> 5-1 </td>
+		<td> 5-2 </td>
+		<td> 5-3 </td>
+	</tr> <!--5행 5개-->
+  </table><p>
+    </div>
+ </body>
+</html>

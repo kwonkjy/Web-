@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+  <style>
+	body{
+	 margin:0;  /* 바깥여백 0, auto 가능 */
+	}
+	a{
+	 color:black;
+	 text-decoration:none;
+	}
+	h1{
+	 font-size:45px;
+	 text-align:center;
+	 border-bottom:1px solid gray;
+	 margin:0;
+	 padding:20px;
+	}
+	ol{
+	  border-right:1px solid gray;
+	  width:100px;
+	  margin:0px;
+	  padding:20px;
+	}
+	ul{
+	  border-right:1px solid lightgray;
+	}
+	#grid{  
+	  display:grid;
+	  grid-template-columns: 150px 1fr;
+	}
+	#grid ol{
+	  padding-left:33px;
+	}
+	#grid #article {
+	  padding-left:25px;
+	}
+	@media(max-width:800px){  
+	 #grid{
+	   display:block;
+	 }
+	 ol{
+	   border-right:none;
+	 }
+	 h1{
+	   border-bottom:none;
+	 }
+	}
+  #login {
+         width:160px;
+		 height:40px;
+		 /* border:1px solid black; */
+		 display:flex;
+		 /* justify-content:center; */
+		 align-items:center;
+		 font-size:11px;
+		 font-weight:900;
+	  }
+	  .inp {
+         width:150px;
+		 height:30px;
+	  }
+	  #main {
+          width:700px;
+		  height:100px;
+
+	  }
+	  #main2_first {
+          width:150px;
+		  height:130px;
+	  }
+	  #main2_left {
+         width:349px;
+		 height:130px;
+	  }
+	  #main2_right {
+         width:199px;
+		 height:130px;
+	  }
+	  .login {
+         font-size:40px;
+		 font-weight:900;
+	     text-align:center;
+	  }
+	  .btn {
+         width:88px;
+		 height:88px;
+		 background:#F3E5F5;
+		 border:1px solid #BA68C8;
+	  }
+	  .btn:hover {
+         background:#CE93D8;
+		 color:#F3E5F5;
+	  }
+	  .bott {
+		 display:flex;
+		 justify-content:center;
+		 align-items:center;
+		 border-top:2px solid #AB47BC;
+	  }
+	  .btn2 {
+         width:140px;
+		 height:35px;
+		 background:#F3E5F5;
+         border:1px solid gray;
+		 margin-left:10px;
+	  }
+	  .btn2:hover {
+         background:#CE93D8;
+		 color:#F3E5F5;
+	  }
+  </style>
+
+ <body>
+ 	<h1><a href="index.html">WEB</a></h1>
+	<div id="grid">
+	 <ol>
+	  <li><a href="1-index.html">HTML</a></li>
+	  <li><a href="2-index.html">CSS</a></li>
+	  <li><a href="3-index.html">JavaScript</a></li>
+	  <li><a href="4-index.html">JQuery</a></li>
+	 </ol>
+	<div id="article">
+	 <h2><a href="2-index.html">CSS</a></h2>
+	 <p>
+	 cascading style sheets
+	 </p><hr>
+	<div id="grid">
+	 <ul>
+	  <li><a href="2-1_css.html"> CSS란? </a></li>
+	  <li><a href="2-2_tag.html"> Tag </a></li>
+	  <li><a href="2-3_block.html"> Block/Inline </a></li>
+	  <li><a href="2-4_border.html"> Border </a></li>
+	  <li><a href="2-5_display.html"> Display </a></li>
+	  <li><a href="2-6_form.html"> Login Form </a></li>
+	 </ul>
+	<div id="article"><p><p>
+      <div id="main" class="login"> 로그인 </div>   <!-- 1행 -->
+	   <div id="main2_first" style="float:left"></div>
+	   <div id="main2_left" style="float:left">  <!-- 2행 시작 -->
+	      <div  id="login" style="float:left"> 아이디 </div>
+	      <div  id="login" style="float:left"> <input type="text" class="inp"> </div>
+	      <div  id="login" style="clear:both;float:left;"> 비밀번호 </div>
+	      <div  id="login" style="float:left"> <input type="password" class="inp"> </div>
+	      <div  id="login" style="clear:both;float:left"></div>
+	      <div  id="login" style="float:left;"> <input type="checkbox" checked> 보안접속 </div>
+	   </div>
+	   <div id=main2_right style="float:left">
+	       <input type=button class="btn" value="회원 로그인">
+	   </div>   <!-- 2행 끝 -->
+	   <div style="clear:both;height:30px"> </div> <!-- 선 들어가는 3행 -->
+	   <div id=main class="bott">
+	      <input type=button value="아이디 찾기" class="btn2">
+		  <input type=button value="비밀번호 찾기" class="btn2">
+		  <input type=button value="회원가입" class="btn2">
+	   </div>
+	 </div>
+ </body>
+</html>

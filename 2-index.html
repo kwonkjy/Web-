@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+  <style>
+	body{
+	 margin:0;  /* 바깥여백 0, auto 가능 */
+	}
+	a{
+	 color:black;
+	 text-decoration:none;
+	}
+	h1{
+	 font-size:45px;
+	 text-align:center;
+	 border-bottom:1px solid gray;
+	 margin:0;
+	 padding:20px;
+	}
+	ol{
+	  border-right:1px solid gray;
+	  width:100px;
+	  margin:0px;
+	  padding:20px;
+	}
+	ul{
+	  border-right:1px solid lightgray;
+	}
+	#grid{  
+	  display:grid;
+	  grid-template-columns: 150px 1fr;
+	}
+	#grid ol{
+	  padding-left:33px;
+	}
+	#grid #article {
+	  padding-left:25px;
+	}
+	@media(max-width:800px){  
+	 #grid{
+	   display:block;
+	 }
+	 ol{
+	   border-right:none;
+	 }
+	 h1{
+	   border-bottom:none;
+	 }
+	}
+  </style>
+ <body>
+ 	<h1><a href="index.html">WEB</a></h1>
+	<div id="grid">
+	 <ol>
+	  <li><a href="1-index.html">HTML</a></li>
+	  <li><a href="2-index.html">CSS</a></li>
+	  <li><a href="3-index.html">JavaScript</a></li>
+	  <li><a href="4-index.html">JQuery</a></li>
+	 </ol>
+	<div id="article">
+	 <h2><a href="2-index.html">CSS</a></h2>
+	 <p>
+	 cascading style sheets
+	 </p><hr>
+	<div id="grid">
+	 <ul>
+	  <li><a href="2-1_css.html"> CSS란? </a></li>
+	  <li><a href="2-2_tag.html"> Tag </a></li>
+	  <li><a href="2-3_block.html"> Block-Inline </a></li>
+	  <li><a href="2-4_border.html"> Border </a></li>
+	  <li><a href="2-5_display.html"> Display </a></li>
+	  <li><a href="2-6_form.html"> Login Form </a></li>
+	 </ul>
+	<div id="article">
+	 <h4>20190504 2st 수업필기</h4>
+	 <p><pre>
+* CSS 사용하는 방법 (스타일태그or외부파일 기본=수정용이)
+1. 〈style〉 ~ 〈/style〉 태그사이 정의
+2. 본문에 있는 태그에 직접 속성으로 정의
+3. 외부파일로 정의 
+
+#font-style은 이탤릭체냐 아니냐로.
+#글자크기 px * 0.75 = pt
+px, pt, cm, in, mm, pc
+
+상대적 길이 em, ex, ch, rem, vw, vh, vmin, vmax
+절대적 길이 cm, mm, q, in, pt, pc, px
+
+반응형웹 관련 학습
+http://indivdot.github.io/css/2016/03/26/emrem.html
+
+background-attachement; // fixed 가능
+스크롤 할 때 이미지 움직이는 것이 디폴트.
+attachment 써주면 이미지가 고정된다.
+
+★inline 인라인은 자기공간만, block 블록전체차지 Tag
+★#li 와 div로 전체 레이아웃 잡는다*** 블록태그로!!!
+=> 왜? 가로세로 지정가능하므로.
+
+(CSS 우선순위)
+속성 값 뒤에 !important 를 붙인 속성
+HTML에서 style을 직접 지정한 속성
+#id 로 지정한 속성
+.클래스, :추상클래스 로 지정한 속성
+태그이름 으로 지정한 속성
+상위 객체에 의해 상속된 속성
+같은 우선순위일시, 부모-자식관계가 많은 것이 우선, 
+모든 설정이 같은 경우 나중에 선언한 것이 우선되어 적용.
+
+[속성 선택자]
+#문장정렬 =>text-align, vertical-aling 수직정렬
+=>vertical-aling 안먹으면 display flex 사용. ***
+vertical-aling은 테이블에서만 상하정렬이 먹음.
+(top, middle, bottom)
+
+#text-align : center, left, right, justify 문장정렬
+display:flex; (flex-start, center, flex-end)
+justify-content:center; /*좌우정렬*/
+align-items:center; /*상하정렬*/
+
+#text-decoration : 밑줄.윗줄.중간줄 139p 156p
+  none, underline, overline, line-through
+  color:blacok; => 컬러지정가능(보라색으로 안변하게)
+★ 가상클래스선택자 = hover, active
+★  a:hover{  *a태그영역에 마우스가 올라올 때*/
+ text-decoration:underline; 밑줄만들어라  } 
+★  a:active{  *a태그영역에 마우스를 클릭했을 때*/
+ text-decoration:underline; 밑줄만들어라 }
+
+#text-direction :: 텍스트방향 direction:값
+#text-indent ::글자 들여쓰기
+
+#letter-spacing :: 문자간격 letter-spacing:값 (word-spacing: 단어간 간격)
+#line-height :: 줄간격
+#text-shadow :: 글자그림자
+ (수평값 수직값 흐림도 색상 // 100px 100px 5px red) (=> 그냥 띄어쓰기로 줌/ 수평수직값 -가능)
+#text-transform :: 대소문자 (uppercase, lowercase, capitalize) (=>DB연동시 대소문자통일해야할 때)
+#overflow : 내용 넘칠 때 (생략, auto, hidden, scroll)
+
+<Table>
+caption-side(제목위치) / empty-cell(빈td테두리)
+layout(테이블크기)
+
+<Display>
+#inline, inline-block, block
+-인라인은 자기공간만 차지 // 블록은 한 행 전부차지
+-인라인블록은 인라인적용+가로세로가능
+
+#visibility 속성 (보이냐.안보이냐)
+-visible
+-hidden
+-collapse :: 테이블을 숨긴다
+
+#border-spacing = cell-spacing 같은 기능
+ table에 border 안주면 선 안보이는데,
+ td에만 border를 주면 외곽박스 안보이게 나옴 ***
+#border-collapse : 테이블 테두리 분리
+
+#Float :: clear해주면 이후 내용 영향없이 분리
+clear:right; clear:both;(R.L둘다)
+
+*GitHub Pages 무료테마 Jekyll
+http://jekyllthemes.org/
+  </pre>
+    </div>
+ </body>
+</html>
