@@ -1,4 +1,3 @@
-<? include "top.html" ?>
 <!doctype html>
 <html lang="en">
  <head>
@@ -7,197 +6,77 @@
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet"
-  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <title>Document</title>
+ </head>
   <style>
-	#bak{
-	  width:800px;
-	  height:40px;
-	  display:flex;            /* #left, #right를 같은 라인에 */
-	  background:#542075;
-	  color:white;
-   	  margin:auto;
+	body{
+	 margin:0;  /* 바깥여백 0, auto 가능 */
 	}
-	#bak #left{
-	  width:780px;
-  	  height:40px;
-	  display:flex;
-	  justify-content:center;  /*좌우정렬*/
-	  align-items:center;	  /*상하정렬*/
+	a{
+	 color:black;
+	 text-decoration:none;
 	}
-	#bak #right{
-	  width:10px;
-  	  height:40px;
- 	  display:flex;
-	  align-items:center;	
+	h1{
+	 font-size:45px;
+	 text-align:center;
+	 border-bottom:1px solid gray;
+	 margin:0;
+	 padding:20px;
 	}
-	#join{
-	  width:800px;
-	  height:40px;
-	  font-size:12px;
-  	  margin:auto;
+	ol{
+	  border-right:1px solid gray;
+	  width:100px;
+	  margin:0px;
+	  padding:20px;
 	}
-	#join #left{
-	  width:390px;
-	  height:40px;
-	  float:left;     /*내부 id는 늘 부모 안에서의 왼.오 기준임*/
-	  display:flex;
-	  justify-content:flex-start;
-	  align-items:center;	
+	#grid{   /*그리드로 반응형 웹 만들기*/
+	  display:grid;
+	  grid-template-columns: 150px 1fr;
 	}
-	#join #left #bae{
-	  border:1px solid darkgray;
-	  border-radius:8px;
-	  padding:3px;
+	#grid ol{
+	  padding-left:33px;
 	}
-	#join #left #bae b {
-	  color:#542075;
+	#grid #article {
+	  padding-left:25px;
 	}
-	#join #right{
-  	  width:390px;
-	  height:40px;
-	  float:right;   
-	  display:flex;
-	  justify-content:flex-end;
-	  align-items:center;
-	}
-	#join #right span {
-	  display:inline-block;  /*span에 가로세로주기*/
-	  width:2px;
-	  height:10px;
-	  background:darkgray;
-	  margin-left:7px;
-	  margin-right:7px;
-	}
-	#logo{
-	  width:800px;
-	  height:100px;
-  	  margin:auto;
-	}
-	#menu{			 /*메뉴바 전체*/
-	  width:800px;
-	  height:50px;
-	  margin:auto;
-	}
-	#menu #cate{      /*메뉴바 세부 분할*/
-	  list-style-type:none;
-	  width:790px;
-	  height:50px;
-	}
-	#menu #cate li{    /*메뉴바 내용*/
-	  float:left;
-	  width:85px;
-	}
-    #menu #cate #aa{
-    width:180px;
-    height:30px;
-    border:1px solid #dddddd;
-    border-radius:15px;
-    display:flex;
-    align-items:center;   /*input 돋보기를 상하정렬(중앙)*/
-    background:#dddddd;
-    }
-	#menu #cate #aa #left{			/*input type 검색 서치바*/
-	float:left;   /* #aa 내 왼쪽, 오른쪽으로 배치한다. 선택자가 aa > left, right */
-	border:none;			/* input type 외곽선 숨김 */
-	margin-left:10px;     /*input type 입력커서 떨어뜨리기 : 외곽선부터 왼쪽으로*/
-	margin-right:-15px;
-	background:#dddddd;
-    }
-    #menu #cate #aa #right{    /*done(돋보기) 아이콘 구역*/
-    float:right;
-    }
- 
-	#menu #cate li:first-child{   /*전체카테고리 칸 늘리기*/
-	  width:130px;
-	}
-	#menu #cate #aa #left li:nth-child(6){   /*검색바*/
-	  width:150px;
-	}
-	#menu #cate #aa #right li:nth-child(7){   /*돋보기*/
-	  width:20px;
-	}
-	#img{
-	  width:1000px;
-	  height:400px;
-	  margin:auto;
-	}
-	#sang{
-	  width:800px;
-	  height:400px;
-	  margin:auto;
-	}
-	#go{				/*7층 고객센터*/
-	  width:800px;
-	  height:400px;
-	  margin:auto;
-	}
-	#go #first{			/*7층 2-1칸*/
-	  width:800px;
-	  height:50px;
-	}
-	#go #second{
-	  width:800px;
-	  height:200px;
-	  display:flex;
-	}
-	#go #second #left{
-	  width:130px;
-	  height:200px;
-	}
-	#go #second #center{
-	  width:260px;
-	  height:200px;
-	  font-size:13px;
-	}
-	#go #second #right{
-	  width:500px;
-	  height:200px;
-	  font-size:12px;
-	}
-	#go #third{
-	  width:800px;
-	  height:50px;
-	  display:flex;
-	}
-	#go #third #left{
-	  width:390px;
-	  height:50px;
-	  font-size:10px;
-	}
-	#go #third #center{
-	  width:250px;
-	  height:50px;
-	}
-	#go #third #right{
-	  width:170px;
-	  height:50px;
+	@media(max-width:800px){  /*해당 선언의 역할 무엇인가?*/
+	 #grid{
+	   display:block;
+	 }
+	 ol{
+	   border-right:none;
+	 }
+	 h1{
+	   border-bottom:none;
+	 }
 	}
   </style>
- </head>
-
  <body>
-   <!--content 영역만 /// top.html과 bottom.html으로 불러왔음-->
-   <div id="img" align="center"><img src="banner.jpg"></div> <!--5층 배너-->
-
-   <div id="sang">											    <!--6층 상품4개-->
-     <table width="780" height="300" align="center">
-	 <caption><h2>이 상품 어때요? <!--표제목-->
-	  <tr>   <!--2행 4열-- tr 2개, td 4개-->
-	   <td><img src="1.jpg" width=190></td>
-	   <td><img src="2.jpg" width=190></td>
-	   <td><img src="3.jpg" width=190></td>
-	   <td><img src="4.jpg" width=193></td>
-	  </tr>
-	  <tr valing="top">
-	   <td>[신선한특가] GAP 오이<br>900원<br><s>1,590원</s></td>
-	   <td>[신선한특가][태우한우]<br>한우 1+ 양지(절단육)<br>9,900원<br></td>
-	   <td>[설성목장] 무항생제 양념 닭갈비<br>13,900원<br></td>
-	   <td>[CHAM] 노르웨이 고등어<br>5,590원</td>
-	  </tr>
-	 </table>
-   </div>
-
-<? include "bottom.html" ?>
+ 	<h1><a href="index.html">WEB!</a></h1>
+	<div id="grid">
+	 <ol>
+	  <li><a href="1.html">HTML</a></li>
+	  <li><a href="2.html">CSS</a></li>
+	  <li><a href="3.html">JavaScript</a></li>
+	  <li><a href="4.html">JQuery</a></li>
+	 </ol>
+	<div id="article">
+	 <h2>HTML</h2>
+	 <p>
+	  Hypertext Markup Language
+	 </p>
+	 <h2>CSS</h2>
+	 <p>
+	 Cascading style sheets
+	 </p>
+	 <h2>JavaScript</h2>
+	 <p>
+	 cross platform, Objectoriented
+	 </p>
+	 <h2>JQuery</h2>
+	 <p>
+	  JavaScript Library
+	 </p>
+    </div>
+ </body>
+</html>
